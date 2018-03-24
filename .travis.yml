@@ -6,6 +6,6 @@ before_script:
   - python manage.py migrate
 script:
   - flake8
-  - coverage run --source='.' manage.py test --settings=config.settings.production
+  - coverage run --source='.' --omit=config/settings/development.py,config/wsgi.py manage.py test --settings=config.settings.production
 after_success:
   - coveralls
