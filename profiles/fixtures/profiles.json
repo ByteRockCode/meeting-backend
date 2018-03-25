@@ -1,0 +1,83 @@
+[
+{
+    "model": "profiles.profile",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "email": "Sa\u00fal.Hormaz\u00e1bal@fake.com",
+        "company": 1
+    }
+},
+{
+    "model": "profiles.profile",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "email": "Juan.P\u00e9rez@fake.com",
+        "company": 1
+    }
+},
+{
+    "model": "profiles.profile",
+    "pk": 3,
+    "fields": {
+        "user": null,
+        "email": "Gonzalo.Gonz\u00e1lez@fake.com",
+        "company": 1
+    }
+},
+{
+    "model": "profiles.profile",
+    "pk": 4,
+    "fields": {
+        "user": null,
+        "email": "Fernando.Fern\u00e1ndez@fake.com",
+        "company": 1
+    }
+},
+{
+    "model": "profiles.profile",
+    "pk": 5,
+    "fields": {
+        "user": null,
+        "email": "\u00c1lvaro.\u00c1lvarez@fake.com",
+        "company": 1
+    }
+},
+{
+    "model": "profiles.profile",
+    "pk": 6,
+    "fields": {
+        "user": null,
+        "email": "Benito.Ben\u00edtez@fake.com",
+        "company": 1
+    }
+},
+{
+    "model": "profiles.profile",
+    "pk": 7,
+    "fields": {
+        "user": null,
+        "email": "Domingo.Dom\u00ednguez@fake.com",
+        "company": 1
+    }
+},
+{
+    "model": "profiles.profile",
+    "pk": 8,
+    "fields": {
+        "user": null,
+        "email": "Enrique.Enr\u00edquez@fake.com",
+        "company": 1
+    }
+},
+{
+    "model": "profiles.profile",
+    "pk": 9,
+    "fields": {
+        "user": null,
+        "email": "Hern\u00e1n.Hern\u00e1ndez@fake.com",
+        "company": 1
+    }
+}
+]

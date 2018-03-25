@@ -1,0 +1,38 @@
+[
+{
+    "model": "meetings.guest",
+    "pk": 1,
+    "fields": {
+        "meeting": 2,
+        "profile": 2,
+        "creator": false
+    }
+},
+{
+    "model": "meetings.guest",
+    "pk": 2,
+    "fields": {
+        "meeting": 2,
+        "profile": 3,
+        "creator": false
+    }
+},
+{
+    "model": "meetings.guest",
+    "pk": 3,
+    "fields": {
+        "meeting": 3,
+        "profile": 2,
+        "creator": false
+    }
+},
+{
+    "model": "meetings.guest",
+    "pk": 4,
+    "fields": {
+        "meeting": 3,
+        "profile": 3,
+        "creator": false
+    }
+}
+]

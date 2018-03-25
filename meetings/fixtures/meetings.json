@@ -1,0 +1,60 @@
+[
+{
+    "model": "meetings.meeting",
+    "pk": 1,
+    "fields": {
+        "motive": "Primera reuni\u00f3n de requerimientos",
+        "from_datetime": "2018-03-26T10:00:00Z",
+        "to_datetime": "2018-03-26T11:00:00Z",
+        "creation_timestamp": "2018-03-24T23:26:51.129Z",
+        "update_timestamp": "2018-04-07T03:20:26.546Z",
+        "companies": [
+        ]
+    }
+},
+{
+    "model": "meetings.meeting",
+    "pk": 2,
+    "fields": {
+        "motive": "Segunda reuni\u00f3n de requerimientos",
+        "from_datetime": "2018-03-29T14:00:00Z",
+        "to_datetime": "2018-03-29T16:00:00Z",
+        "creation_timestamp": "2018-03-24T23:35:58.371Z",
+        "update_timestamp": "2018-04-07T03:20:33.081Z",
+        "companies": [
+            1
+        ]
+    }
+},
+{
+    "model": "meetings.meeting",
+    "pk": 3,
+    "fields": {
+        "motive": "Tercera reuni\u00f3n de requerimientos",
+        "from_datetime": "2018-03-30T14:00:00Z",
+        "to_datetime": "2018-03-30T16:00:00Z",
+        "creation_timestamp": "2018-03-25T23:35:58.371Z",
+        "update_timestamp": "2018-04-07T03:20:33.081Z",
+        "companies": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "meetings.meeting",
+    "pk": 4,
+    "fields": {
+        "motive": "Cuarta reuni\u00f3n de requerimientos",
+        "from_datetime": "2018-03-31T14:00:00Z",
+        "to_datetime": "2018-03-31T16:00:00Z",
+        "creation_timestamp": "2018-03-26T23:35:58.371Z",
+        "update_timestamp": "2018-04-07T03:20:33.081Z",
+        "companies": [
+            1,
+            2,
+            3
+        ]
+    }
+}
+]

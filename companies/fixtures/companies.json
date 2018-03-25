@@ -1,0 +1,44 @@
+[
+{
+    "model": "companies.company",
+    "pk": 1,
+    "fields": {
+        "owner": 2,
+        "description": "Vestibulum consequat imperdiet nisi ut tempus. Fusce consectetur, mi eget mattis imperdiet, leo libero venenatis eros, non malesuada felis libero at eros",
+        "logo": "companies/fixtures/images/unholster.png",
+        "name": "Tecnored",
+        "slug": "tecnored",
+        "website": "https://tecnored.fake",
+        "creation_timestamp": "2018-03-26T01:33:36.418Z",
+        "update_timestamp": "2018-03-26T01:33:36.436Z"
+    }
+},
+{
+    "model": "companies.company",
+    "pk": 2,
+    "fields": {
+        "owner": 1,
+        "description": "Curabitur et elit efficitur, dignissim tortor sit amet, auctor nisl. Aenean dapibus mattis aliquet. Nunc mollis est eget vehicula rhoncus. Nulla facilisi.",
+        "logo": "companies/fixtures/images/coordinador-electrico-nacional.png",
+        "name": "P\u00e9rez & Asociados",
+        "slug": "perez-asociados",
+        "website": "https://perez.fake",
+        "creation_timestamp": "2018-03-26T01:33:36.418Z",
+        "update_timestamp": "2018-03-26T01:34:51.456Z"
+    }
+},
+{
+    "model": "companies.company",
+    "pk": 3,
+    "fields": {
+        "owner": 1,
+        "description": "",
+        "logo": "",
+        "name": "CompuMundoHiperMegaRed",
+        "slug": "compumundohipermegared",
+        "website": null,
+        "creation_timestamp": "2018-04-07T03:32:26.769Z",
+        "update_timestamp": "2018-04-07T03:32:26.769Z"
+    }
+}
+]
