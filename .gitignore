@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# proyect
+config/db.sqlite3
+media/
