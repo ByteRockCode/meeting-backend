@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+graphene-django = "*"
+bpython = "*"
+
+[dev-packages]
+django-extensions = "*"
+django-debug-toolbar = "*"
+coverage = "*"
+coveralls = "*"
+"flake8" = "*"
+
+[requires]
+python_version = "3.6"
