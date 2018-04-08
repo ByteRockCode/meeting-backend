@@ -4,7 +4,7 @@ from .base import *  # noqa: F401,F403
 
 
 CSRF_COOKIE_SECURE = True
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', False)
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
@@ -16,3 +16,51 @@ X_FRAME_OPTIONS = 'DENY'
 
 ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(' ')
 SECRET_KEY = os.environ['SECRET_KEY']
+
+RAVEN_CONFIG = {
+    'dsn': os.environ['RAVEN_DSN'],
+    'environment': os.environ.get('ENV', 'production'),
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'root': {
+        'level': 'WARNING',
+        'handlers': ['sentry'],
+    },
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module) %(process)d %(thread)d %(message)s',
+        },
+    },
+    'handlers': {
+        'sentry': {
+            'level': 'WARNING',
+            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+            'tags': {'custom-tag': 'x'},
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        }
+    },
+    'loggers': {
+        'django.db.backends': {
+            'level': 'WARNING',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'raven': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'sentry.errors': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+    },
+}

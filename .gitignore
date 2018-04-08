@@ -81,6 +81,7 @@ celerybeat-schedule
 
 # dotenv
 .env
+.env.fish
 
 # virtualenv
 .venv
@@ -101,5 +102,5 @@ ENV/
 .mypy_cache/
 
 # proyect
-config/db.sqlite3
+db.sqlite3
 media/

@@ -4,8 +4,6 @@ python:
 install:
   - pip install pipenv
   - pipenv install --dev
-before_script:
-  - python manage.py migrate
 script:
   - flake8
   - coverage run --source='.' --omit=config/settings/development.py,config/wsgi.py manage.py test -v 2 --settings=config.settings.production
@@ -19,4 +17,3 @@ deploy:
   on: master
   run:
     - python manage.py migrate
-    - python manage.py collectstatic
