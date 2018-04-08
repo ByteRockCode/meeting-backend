@@ -1,7 +1,7 @@
 language: python
 python:
-  - "3.6"
-install: "pip install -r requirements/testing.txt"
+  - 3.6
+install: pip install -r requirements/testing.txt
 before_script:
   - python manage.py migrate
 script:
@@ -9,3 +9,12 @@ script:
   - coverage run --source='.' --omit=config/settings/development.py,config/wsgi.py manage.py test -v 2 --settings=config.settings.production
 after_success:
   - coveralls
+deploy:
+  provider: heroku
+  api_key:
+    secure: K91OO7MJBzEiiSCpWyiC4EcxF/T52B4siGnNwhsB/5VOrVy0xXslochl/OAHLfLPElH0QOke69i1fGwRmC5yiScTrwZcDAvhkYAEAvZ82Hr3uEJ7FL7kHoDzky3Oj5QNzlJZ7vypKC4riwGIiebpoUwsU6pkyxJZHHbC8JbRQ1llGe9CAqrC/dVo2h+kFEyMgkbMSdvWGonBZU6TarJB+NoZOzy9jlZf5oFk9wr4t/Lan1m5Pov6whG6ZQi8XKHvF/MnCr3fr+xsWnK2qjos+NW0ZtsRF13QwnczNC2AeomCG0bcsGy4eKdNFd8k5wg7yqexMeZVrEh8WJImcqwMxz1RoJnkOzPPdhEzaAjIDlI94XGlCAaiMbELC8dgnpAT50zNHJrWKdunElExuFl/w/pczyhRN649bjMyXR4X6YhHmrjMIm2LtXcT6MCeEFXOKsFwAUQTVbrTeyHLiLEA/PwWdiNBdXqrV4ooFUC8doLMEirl8cCmyoS60Pf8Wl3u+4I5BbTExT8tzPRtFZrRps4dgTzwfpSXABaOu2jNyD/xwte4l8QUydDVPMS/eZrL65L3ayo3F6hNpO0fN5eJB5DTdHxzwXlhLj3RD/ync7KZQtYOEZXWyDq1Mt92Qt5Ql3aNu5sZmJzg9yckrcwU/lNFGRa8aZjUtXeaq8x6Vn8=
+  app: byterock-meeting-backend
+  on: master
+  run:
+    - python manage.py migrate
+    - python manage.py collectstatic
