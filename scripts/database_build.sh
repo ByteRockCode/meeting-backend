@@ -1,4 +1,4 @@
 #!/bin/bash
 
 python manage.py migrate
-sh scripts/load_fixtures.sh
+sh scripts/fixtures_load.sh
