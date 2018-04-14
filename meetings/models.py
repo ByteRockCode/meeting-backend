@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.urls import reverse
 
 
 class Agreement(models.Model):
@@ -83,3 +84,6 @@ class Meeting(models.Model):
         from_time = self.from_datetime.time()
 
         return f'{self.motive}, el {from_date} a las {from_time}'
+
+    def get_absolute_url(self):
+        return reverse('meetings__detail', args=[self.id])

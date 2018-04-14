@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ meeting }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <h2>Motivo</h2>
+
+    <p>{{ meeting.motive }}</p>
+
+    <h2>Asistentes</h2>
+
+    <ul>
+        {% for guest in meeting.guests.all %}
+            <li>{{ guest }}</li>
+        {% empty %}
+            <li>No se registraron asistentes</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Acuerdos</h2>
+
+    <ul>
+        {% for agreement in meeting.agreements.all %}
+            <li>{{ agreement.description }}</li>
+        {% empty %}
+            <li>No se registraron acuerdos</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Compromisos</h2>
+
+    <ul>
+        {% for compromise in meeting.compromises.all %}
+            <li>{{ compromise.description }}</li>
+        {% empty %}
+            <li>No se registraron compromisos</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
