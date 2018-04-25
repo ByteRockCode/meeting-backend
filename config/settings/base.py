@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
     'graphene_django',
     'raven.contrib.django.raven_compat',
 
@@ -47,7 +48,7 @@ INSTALLED_APPS = [
 ]
 
 GRAPHENE = {
-    'SCHEMA': 'companies.schema.schema',
+    'SCHEMA': 'config.schema.schema',
 }
 
 MIDDLEWARE = [
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -151,3 +153,10 @@ MEDIA_ROOT = 'media'
 FIXTURE_DIR = [
     'fixtures',
 ]
+
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+)
+
+CSRF_COOKIE_HTTPONLY= True

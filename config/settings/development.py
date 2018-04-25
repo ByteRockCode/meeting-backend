@@ -8,9 +8,13 @@ DEBUG = True
 
 INSTALLED_APPS += [
     'django_extensions',
-    'debug_toolbar',
 ]
 
-MIDDLEWARE += [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
-]
+if os.environ.get('DEBUG_TOOLBAR', False):
+    INSTALLED_APPS += [
+        'debug_toolbar',
+    ]
+
+    MIDDLEWARE += [
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    ]
