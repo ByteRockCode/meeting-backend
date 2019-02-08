@@ -21,7 +21,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+]
 
 INTERNAL_IPS = [
     '127.0.0.1',
@@ -157,6 +159,7 @@ FIXTURE_DIR = [
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
+    '192.168.43.196:3000',
 )
 
-CSRF_COOKIE_HTTPONLY= True
+CSRF_COOKIE_HTTPONLY = True
